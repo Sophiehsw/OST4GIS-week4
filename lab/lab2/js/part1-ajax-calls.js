@@ -7,7 +7,8 @@
 
 
 
-
+ var solarInstall = $.ajax ("https://raw.githubusercontent.com/CPLN-692-401/datasets/master/json/philadelphia-solar-installations.json");
+ solarInstall.then(function(res) {console.log(JSON.parse(res))})
 
 var map = L.map('map', {
   center: [39.9522, -75.1639],
@@ -21,5 +22,5 @@ var Stamen_TonerLite = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/ton
   ext: 'png'
 }).addTo(map);
 
-// L.terminator().addTo(map)
 
+// L.terminator().addTo(map)
